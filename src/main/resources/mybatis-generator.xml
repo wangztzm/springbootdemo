@@ -24,7 +24,7 @@
         <javaModelGenerator targetPackage="com.ming.demo.modules.user.entity"
                             targetProject="src/main/java"></javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="user.mapper" targetProject="src/main/resources"></sqlMapGenerator>
+        <sqlMapGenerator targetPackage="mapper.modules.user" targetProject="src/main/resources"></sqlMapGenerator>
 
         <javaClientGenerator targetPackage="com.ming.demo.modules.user.mapper"
                              targetProject="src/main/java" type="XMLMAPPER"></javaClientGenerator>

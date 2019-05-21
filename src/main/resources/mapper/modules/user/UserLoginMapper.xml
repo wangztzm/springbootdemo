@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ming.demo.modules.user.mapper.UserLoginMapper">
+  <resultMap id="BaseResultMap" type="com.ming.demo.modules.user.entity.UserLogin">
+    <result column="user_login_id" jdbcType="VARCHAR" property="userLoginId" />
+    <result column="current_password" jdbcType="VARCHAR" property="currentPassword" />
+    <result column="password_hint" jdbcType="VARCHAR" property="passwordHint" />
+    <result column="is_system" jdbcType="CHAR" property="isSystem" />
+    <result column="enabled" jdbcType="CHAR" property="enabled" />
+    <result column="has_logged_out" jdbcType="CHAR" property="hasLoggedOut" />
+    <result column="require_password_change" jdbcType="CHAR" property="requirePasswordChange" />
+    <result column="last_currency_uom" jdbcType="VARCHAR" property="lastCurrencyUom" />
+    <result column="last_locale" jdbcType="VARCHAR" property="lastLocale" />
+    <result column="last_time_zone" jdbcType="VARCHAR" property="lastTimeZone" />
+    <result column="disabled_date_time" jdbcType="TIMESTAMP" property="disabledDateTime" />
+    <result column="successive_failed_logins" jdbcType="DECIMAL" property="successiveFailedLogins" />
+    <result column="external_auth_id" jdbcType="VARCHAR" property="externalAuthId" />
+    <result column="user_ldap_dn" jdbcType="VARCHAR" property="userLdapDn" />
+    <result column="disabled_by" jdbcType="VARCHAR" property="disabledBy" />
+    <result column="last_updated_stamp" jdbcType="TIMESTAMP" property="lastUpdatedStamp" />
+    <result column="last_updated_tx_stamp" jdbcType="TIMESTAMP" property="lastUpdatedTxStamp" />
+    <result column="created_stamp" jdbcType="TIMESTAMP" property="createdStamp" />
+    <result column="created_tx_stamp" jdbcType="TIMESTAMP" property="createdTxStamp" />
+    <result column="party_id" jdbcType="VARCHAR" property="partyId" />
+  </resultMap>
+  <insert id="insert" parameterType="com.ming.demo.modules.user.entity.UserLogin">
+    insert into user_login (user_login_id, current_password, password_hint, 
+      is_system, enabled, has_logged_out, 
+      require_password_change, last_currency_uom, last_locale, 
+      last_time_zone, disabled_date_time, successive_failed_logins, 
+      external_auth_id, user_ldap_dn, disabled_by, 
+      last_updated_stamp, last_updated_tx_stamp, 
+      created_stamp, created_tx_stamp, party_id
+      )
+    values (#{userLoginId,jdbcType=VARCHAR}, #{currentPassword,jdbcType=VARCHAR}, #{passwordHint,jdbcType=VARCHAR}, 
+      #{isSystem,jdbcType=CHAR}, #{enabled,jdbcType=CHAR}, #{hasLoggedOut,jdbcType=CHAR}, 
+      #{requirePasswordChange,jdbcType=CHAR}, #{lastCurrencyUom,jdbcType=VARCHAR}, #{lastLocale,jdbcType=VARCHAR}, 
+      #{lastTimeZone,jdbcType=VARCHAR}, #{disabledDateTime,jdbcType=TIMESTAMP}, #{successiveFailedLogins,jdbcType=DECIMAL}, 
+      #{externalAuthId,jdbcType=VARCHAR}, #{userLdapDn,jdbcType=VARCHAR}, #{disabledBy,jdbcType=VARCHAR}, 
+      #{lastUpdatedStamp,jdbcType=TIMESTAMP}, #{lastUpdatedTxStamp,jdbcType=TIMESTAMP}, 
+      #{createdStamp,jdbcType=TIMESTAMP}, #{createdTxStamp,jdbcType=TIMESTAMP}, #{partyId,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.ming.demo.modules.user.entity.UserLogin">
+    insert into user_login
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userLoginId != null">
+        user_login_id,
+      </if>
+      <if test="currentPassword != null">
+        current_password,
+      </if>
+      <if test="passwordHint != null">
+        password_hint,
+      </if>
+      <if test="isSystem != null">
+        is_system,
+      </if>
+      <if test="enabled != null">
+        enabled,
+      </if>
+      <if test="hasLoggedOut != null">
+        has_logged_out,
+      </if>
+      <if test="requirePasswordChange != null">
+        require_password_change,
+      </if>
+      <if test="lastCurrencyUom != null">
+        last_currency_uom,
+      </if>
+      <if test="lastLocale != null">
+        last_locale,
+      </if>
+      <if test="lastTimeZone != null">
+        last_time_zone,
+      </if>
+      <if test="disabledDateTime != null">
+        disabled_date_time,
+      </if>
+      <if test="successiveFailedLogins != null">
+        successive_failed_logins,
+      </if>
+      <if test="externalAuthId != null">
+        external_auth_id,
+      </if>
+      <if test="userLdapDn != null">
+        user_ldap_dn,
+      </if>
+      <if test="disabledBy != null">
+        disabled_by,
+      </if>
+      <if test="lastUpdatedStamp != null">
+        last_updated_stamp,
+      </if>
+      <if test="lastUpdatedTxStamp != null">
+        last_updated_tx_stamp,
+      </if>
+      <if test="createdStamp != null">
+        created_stamp,
+      </if>
+      <if test="createdTxStamp != null">
+        created_tx_stamp,
+      </if>
+      <if test="partyId != null">
+        party_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userLoginId != null">
+        #{userLoginId,jdbcType=VARCHAR},
+      </if>
+      <if test="currentPassword != null">
+        #{currentPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="passwordHint != null">
+        #{passwordHint,jdbcType=VARCHAR},
+      </if>
+      <if test="isSystem != null">
+        #{isSystem,jdbcType=CHAR},
+      </if>
+      <if test="enabled != null">
+        #{enabled,jdbcType=CHAR},
+      </if>
+      <if test="hasLoggedOut != null">
+        #{hasLoggedOut,jdbcType=CHAR},
+      </if>
+      <if test="requirePasswordChange != null">
+        #{requirePasswordChange,jdbcType=CHAR},
+      </if>
+      <if test="lastCurrencyUom != null">
+        #{lastCurrencyUom,jdbcType=VARCHAR},
+      </if>
+      <if test="lastLocale != null">
+        #{lastLocale,jdbcType=VARCHAR},
+      </if>
+      <if test="lastTimeZone != null">
+        #{lastTimeZone,jdbcType=VARCHAR},
+      </if>
+      <if test="disabledDateTime != null">
+        #{disabledDateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="successiveFailedLogins != null">
+        #{successiveFailedLogins,jdbcType=DECIMAL},
+      </if>
+      <if test="externalAuthId != null">
+        #{externalAuthId,jdbcType=VARCHAR},
+      </if>
+      <if test="userLdapDn != null">
+        #{userLdapDn,jdbcType=VARCHAR},
+      </if>
+      <if test="disabledBy != null">
+        #{disabledBy,jdbcType=VARCHAR},
+      </if>
+      <if test="lastUpdatedStamp != null">
+        #{lastUpdatedStamp,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdatedTxStamp != null">
+        #{lastUpdatedTxStamp,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createdStamp != null">
+        #{createdStamp,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createdTxStamp != null">
+        #{createdTxStamp,jdbcType=TIMESTAMP},
+      </if>
+      <if test="partyId != null">
+        #{partyId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>

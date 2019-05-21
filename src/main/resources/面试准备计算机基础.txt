@@ -1,0 +1,95 @@
+计算机基础知识
+TCP
+设计模式
+java语言基础
+
+
+1、进程与线程部分
+https://www.cnblogs.com/dreamroute/p/5207813.html
+http://www.sohu.com/a/237171690_465221
+
+区别和联系：
+对操作系统来说，进程是系统资源分配的最小单位。
+线程是是程序执行的最小单位。进程使用独立的数据空间。线程共享进程的数据空间。
+可以通过加锁的方式防止多个线程同时读写某一块内存区域。互斥锁。某些内存区域，只能供给固定数目的线程使用，可以使用信号量的做法实现，用来保证多个线程不会互相冲突。
+每个线程有自己的栈段。
+
+线程调度
+https://www.jianshu.com/p/ecfddbc0af2d
+1、时间片轮转调度 都有固定的执行时间
+2、先来先服务调度 先到的先执行
+3、优先级调度 队列中优先级高的先执行
+4、多级反馈队列调度 时间片轮转与优先级结合的
+5、高响应比优先调度 响应比越高 优先执行
+
+线程切换步骤 线程切换的代价
+
+协程更轻量化，是在用户态进行调度，切换的代价比线程上下文切换低。
+http://www.sohu.com/a/237171690_465221
+
+
+2、linux常用命令
+awk: 处理文本文件 http://www.ruanyifeng.com/blog/2018/11/awk.html
+awk -F ':' '{print NR ")" $1}' demo.txt
+挺强大呀这个命令 之前怎么不知道啊啊啊
+
+top：主要用于查看进程相关信息，同时也会提供cup信息和内存信息。
+
+netstat：网络状态查看的命令。我看见有tcp连接有关的内容 譬如Recv-Q、Send
+http://c.biancheng.net/view/800.html
+
+grep：可以用来搜索文本
+
+less：用于浏览文件内容。可以翻页。使用/文件内容，然后回车，将查找结果高亮显示。
+https://jingyan.baidu.com/article/db55b609d94d414ba30a2f0d.html
+
+tail：只显示后面几行，用于实时查看文件的内容。
+https://www.jianshu.com/p/ee44fe0c5bae
+
+网络知识
+4/7层网络模型
+http://www.ruanyifeng.com/blog/2012/05/internet_protocol_suite_part_i.html
+http://www.ruanyifeng.com/blog/2012/06/internet_protocol_suite_part_ii.html
+看完这个明白了很多
+
+每一层都是一个协议，都是为了完成一种功能。
+
+应用层  规定应用程序的数据格式
+表示层
+会话层
+传输层 建立端口到端口的通信，网络层是主机到主机的通信。Unix系统就把主机+端口，叫做"套接字"（socket）。
+网络层 IP地址，使得能够区分不同的计算机是否属于同一子网络。是子网络的话发广播，不是子网络的话走路由（如何向不同的子网络分发数据包）
+链接层 确定了0和1的分组方式 MAC地址 广播
+物理层 物理手段连接
+
+建立连接的三次握手
+是为了建立双向连接
+1、服务器处于监听端口状态。
+2、客户端发送SYN请求后，处于SYN_SENT状态。
+3、服务端收到SYN后，同意建立连接回复客户端ACK。由于是双工传输server端同时发送一个SYN，请求建立连接，然后server端处于SYN_RCVD。
+4、客户端收到server的ACK后，客户端就变成了established状态，客户端回复server端发送的SYN请求，server端接受到ACK后，server端就变成了established状态。
+连接就建立了 可以通信了。
+https://blog.csdn.net/qq_25948717/article/details/80382766
+
+其实我觉得更简单点就是这样的
+三次握手目的是建立双向连接
+1、发起方发起建立连接的请求
+2、服务方同意连接，服务方回回应可以连接，同时服务方发起连接的请求，
+3、发起方收到回应后，发起方便处于建立连接的状态。然后回应服务方的连接请求。
+4、服务方收到回应后便处于连接状态。
+状态依次是LISTEN SYN_SEND SYN_RCVD ESTABLISHED
+
+
+tcp的特点
+传输可靠 （通过序列号与确认应答提高可靠性）
+因为是处于传输层，所以是端对端的连接。
+双路通信。
+拥塞控制。。。不太懂 可以不说（拥塞控制的算法有4种，即慢开始，拥塞避免，快重传和快恢复）
+基于字节流而非报文传输的（UDP的是报文https://blog.csdn.net/ce123_zhouwei/article/details/8976006）
+
+tcp实现细节：8种报文状态？？keepalive 滑动窗口机制 Nagle算法
+
+SYN洪水攻击
+
+四次挥手断连
+双方都可以发起

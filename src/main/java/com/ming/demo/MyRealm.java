@@ -1,5 +1,7 @@
 package com.ming.demo;
 
+import com.ming.demo.modules.user.entity.UserLogin;
+import com.ming.demo.modules.user.service.UserService;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationException;
 import org.apache.shiro.authz.AuthorizationInfo;
@@ -8,9 +10,6 @@ import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-
-import java.util.Set;
 
 public class MyRealm extends AuthorizingRealm {
 
@@ -26,15 +25,15 @@ public class MyRealm extends AuthorizingRealm {
             throw new AccountException("Null usernames are not allowed by this realm.");
         }
 
-        User user = userService.findUserByName(userMame);
+        UserLogin user = userService.findUserByName(userMame);
 
 
         if (user == null) {
             throw new UnknownAccountException("No account found for admin [" + userMame + "]");
         }
 
-        SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(user, user.getPassword(), getName());
-        String salt = this.getSaltForUser(user.getUserName());
+        SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(user, user.getCurrentPassword(), getName());
+        String salt = this.getSaltForUser(user.getUserLoginId());
         if (salt != null) {
             info.setCredentialsSalt(ByteSource.Util.bytes(salt));
         }
@@ -48,7 +47,7 @@ public class MyRealm extends AuthorizingRealm {
             throw new AuthorizationException("PrincipalCollection method argument cannot be null.");
         }
 
-        User user = (User) getAvailablePrincipal(principals);
+        UserLogin user = (UserLogin) getAvailablePrincipal(principals);
 
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
         return info;
