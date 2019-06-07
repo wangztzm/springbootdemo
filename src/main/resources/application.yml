@@ -3,3 +3,12 @@ spring:
     url: jdbc:mysql://localhost/ming?serverTimezone=UTC
     username: ming
     password: ming
+
+shiro:
+  loginUrl: /admin/login
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

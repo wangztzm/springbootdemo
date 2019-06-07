@@ -19,6 +19,8 @@ public class ShiroConfig {
     public ShiroFilterChainDefinition shiroFilterChainDefinition() {
         DefaultShiroFilterChainDefinition chainDefinition = new DefaultShiroFilterChainDefinition();
 
+        chainDefinition.addPathDefinition("/admin/login", "anon");
+
         // logged in users with the 'admin' role
         chainDefinition.addPathDefinition("/admin/**", "authc, roles[admin]");
 

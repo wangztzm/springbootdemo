@@ -216,3 +216,71 @@ https://bijian1013.iteye.com/blog/2288195
 从上往下看 对象越来越容易被回收
 
 异常处理机制
+https://www.cnblogs.com/baxianhua/p/9162103.html
+error和exception的区别
+都是继承自throwable。
+exception是程序正常运行过程中，可以预料的意外情况，应该捕获并进行
+相应处理。
+是指程序可以处理的异常。捕获后可能恢复。
+exception分为可检查的异常和不可检查异常。可检查异常是在代码中显式的进行捕获处理，这是编译器检查的一部分。不可检查异常是指运行时异常，如NullPointerException。
+error是指程序无法处理的错误。譬如内存溢出。属于jvm负担责任。
+NoClassDefoundError
+
+之前对这个认识确实有问题
+发生的源头不一样
+
+看下java的思维导图
+
+JUC：concurrentxxx atomicxxx caller&future queue locks 这些好多都不不知道。
+
+常用集合：HashMap concurrenthashmap arraylist linkedlist hashset treemap
+
+对象引用：。。
+异常机制：。。
+数据类型：基本数据类型 自动类型转换、空间占用、封装与拆箱
+动态代理与反射语言特色
+版本差异新特性
+
+就这些？？？
+
+总结的挺好 如果让我说的话我还真是说不太明白
+
+hashmap 考察的有数据结构、java基础实现、对并发处理的思想
+hashmap采用的是数组+链表实现的，数组的每一项是一个链表。通过计算存入对象的hashcode，得出对象在数组中存储的位置。
+链表是用来解决散列冲突的。链表中的节点存储的是键值对。
+重新散列机制：rehash
+当键值对的数量超过阀值 capacity(16初始)*loadfactor(0.75)为保证性能，会进行重新散列。
+重新散列主要有两步：1、table扩充为原来的两倍2、将旧table中的entry放到新table中。
+与其他集合类一样，由于failfast特性的存在。使用遍历器操作时应该采用遍历器自身的方法进行数据的修改。
+容量是2的幂次方的原因：
+为了数据能够均匀的分布，减少hash冲突，防止链表长度太长，降低hashmap性能。
+https://blog.csdn.net/eaphyy/article/details/84386313
+
+语言的精准提炼还是不行啊啊啊
+新版的都改了 应该不会导致死循环
+
+concurrenthashmap
+并发控制与分段锁 减小锁的粒度 1.7
+1.8中使用CAS 自旋锁来提高性能。
+悲观锁→分段锁→乐观锁 来提高性能。
+
+链表长度大于8会将链表转为红黑树。
+
+强引用会引起内存泄漏。。。。特别是用到其他的东西
+
+父类中的泛型T，就相当于一个参数，当子类继承这个类时，就要给这个参数赋值，这里是把Person类型传给了父类。
+
+线程上下文切换是有代价的
+1、有开销。即有更多的操作。需要保存线程A的执行现场，载入B的执行现场。
+2、增加资源的消耗。每个线程都有独立的用以存储专用的数据，本地方法栈。保存的话需要占用内存。
+https://blog.csdn.net/big_bit/article/details/52122253
+
+多线程就是为了尽可能的利用cpu的空闲等待时间（等IO,等交互。。。）线程切换也是要使用cpu时间的。假如cpu等待时间比线程切换更短。线程越多，切换线程消耗越大，因为要保存每个线程的现场什么的。那么线程切换会非常影响性能，成为系统瓶颈，所以要设计合理的线程数目。
+
+还有这篇
+锁的切换
+https://blog.csdn.net/gettogetto/article/details/74629805
+
+线程上下文指的是一个进程存储在处理器各寄存器中的数据。
+
+vmstat 监控系统资源
