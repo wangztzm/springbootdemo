@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "msg": "",
+  "data": {
+    "totalFile": "13",
+    "productList": [
+      {
+        "id": "1",
+        "cargoCode":"112",
+        "goodsName":"服装",
+        "englishName": "CLOTH",
+        "ChineseDesc":"",
+        "SpecialProcessingCode":""
+      },{
+        "id": "2",
+        "cargoCode":"113",
+        "goodsName":"其他纺织品",
+        "englishName": "其他纺织品",
+        "ChineseDesc":"",
+        "SpecialProcessingCode":""
+      },{
+        "id": "3",
+        "cargoCode":"131",
+        "goodsName":"玻璃制品",
+        "englishName": "GLASS PRODUCT",
+        "ChineseDesc":"",
+        "SpecialProcessingCode":""
+      }
+    ]
+  }
+}

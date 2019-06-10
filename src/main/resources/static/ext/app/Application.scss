@@ -1,0 +1,179 @@
+/*
+ *  This file can be used to set variables and supply global styling.  View specific 
+ *  styling should be located the view's corresponding scss file.
+ */
+$enable-font-awesome: dynamic(true);
+
+//闁鑵戞潏瑙勵攱妫版粏澹�
+//.x-grid-with-row-lines .x-grid-item.x-grid-item-selected {
+//   border-style: solid;
+//   border-color: #e2e2e2;
+//}
+//.x-grid-with-row-lines .x-grid-item-selected + .x-grid-item {
+//    border-top-style: solid;
+//    border-top-color: #e2e2e2;
+//}
+//.x-grid-with-col-lines .x-grid-item-selected .x-grid-cell {
+//   border-color: #e2e2e2;
+//   border-style: solid;
+//}
+//濮樺瓨灏濈痪锟�
+.x-grid-cell {
+  position: relative;
+  overflow: hidden;
+}
+
+.x-grid-cell:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #666 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform .3s, opacity .5s;
+}
+
+.x-grid-cell:active:after {
+  transform: scale(0, 0);
+  opacity: .3;
+  transition: 0s;
+}
+
+//閽堝from 琛ㄥ崟涓彧璇诲姞鑳屾櫙棰滆壊
+.x-form-readonly input {
+  background-color: #E6E6E6
+}
+
+//姒х姵鐖ｅ鎴ｇ箖妫版粏澹�
+//.x-grid-item-over {
+//    color: #404040;
+//    background-color: #f6f6f6;
+//}
+//姒х姵鐖ｉ柅澶夎厬閼冲本娅欐０婊嗗
+//.x-grid-item-selected {
+//   color: #404040;
+//   background-color: #e2e2e2;
+//}
+
+// border鐢啫鐪弽宄扮础 start
+$global-border-layout-border-color: dynamic(#d0d0d0);
+@include extjs-panel-ui(
+        $ui: 'global-border-layout-north-panel',
+        $ui-border-color: $global-border-layout-border-color,
+        $ui-border-width: 1px 1px 0px 1px
+);
+@include extjs-panel-ui(
+        $ui: 'global-border-layout-center-panel',
+        $ui-border-color: $global-border-layout-border-color
+);
+@include extjs-panel-ui(
+        $ui: 'global-border-layout-sourth-panel',
+        $ui-border-color: $global-border-layout-border-color,
+        $ui-border-width: 0px 1px 1px 1px
+);
+// border鐢啫鐪弽宄扮础 end
+
+// 鐟欏棗娴榖ody閺嶅嘲绱� start
+.global-view-body {
+  padding: 10px 10px;
+}
+
+// 鐟欏棗娴榖ody閺嶅嘲绱� end
+
+.combo-table {
+  border-collapse: collapse;
+  padding: 8px 8px;
+}
+
+// 娑撳濯洪崚妤勩�冩稉楦裤�冮弽鑲╂畱閺嶅嘲绱� start
+.combo-table tr th {
+  background-color: $grid-item-edit-btn-color;
+  height: 30px;
+}
+
+.combo-table tr th, .combo-table tr td {
+  border: 1px solid $color-gray;
+  text-align: center;
+  padding: 0px 8px;
+}
+
+// 娑撳濯洪崚妤勩�冩稉楦裤�冮弽鑲╂畱閺嶅嘲绱� end
+
+// 琛ㄥ崟椤圭洰鍙鏍峰紡 start
+.x-form-readonly input {
+  background-color: #E6E6E6;
+}
+
+// 琛ㄥ崟椤圭洰鍙鏍峰紡 end
+
+// 鑷畾涔夌粍浠惰緭鍏ユ鐨勮儗鏅壊 start
+.x-custom-widget-input {
+  background-color: #ffffcc;
+}
+//gridtable颜色处理
+.child-row .x-grid-cell { background-color: #F08080; color: #000000; }
+.adult-row .x-grid-cell { background-color: #ffffff; color: #000000; }
+// 鑷畾涔夌粍浠惰緭鍏ユ鐨勮儗鏅壊 end
+
+//gridPanel border-top 显示
+.x-noborderC2-trl{
+    border-top:1px solid #C2c2c2!important;
+}
+.title-grid{
+  // font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+}
+//表格边框
+.grid-border-l{
+  border:1px solid #c2c2c2;
+}
+.grid-pl-w{
+  width:100%;
+}
+
+//超出宽度自动换行
+.x-column-header-text-normal {
+	white-space:normal;
+}
+.x-column-header-text-normal .x-column-header-text { 
+	white-space: normal; 
+} 
+//gridPanel title字体颜色及背景色更改
+.x-panel-header-new{
+    background-color:#fff;
+    border-bottom-width: 1px !important;
+    border-bottom: 1px solid #c2c2c2!important;
+}
+.x-panel-header-new .x-panel-header-title-default {
+     color:#000;
+     font-weight: bold;
+     font-size: 16px;
+     letter-spacing: 0.04em;
+}
+.x-border-radius{
+      border-radius:25px;
+}
+.h25{
+    height: 25px!important;
+    line-height: 25px!important;
+    font-size:25px!important;
+    font-family: FontAwesome;
+    text-align: center;
+    color: gray;
+}
+.h12{
+    height: 12px!important;
+     line-height: 12px!important;
+    font-size:12px!important;
+    font-family: FontAwesome;
+    text-align: center;
+    color: gray;
+}

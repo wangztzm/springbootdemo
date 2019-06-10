@@ -1,0 +1,36 @@
+{
+  "success": true,
+  "msg": "",
+  "data": {
+    "totalFile": "13",
+    "airlineSegmentList": [
+      {
+        "id": "1",
+        "segment": "PEK-SHA",
+        "model": "737",
+        "number": "1100",
+        "expectedLandingTime": "2018-07-16 01:02:03",
+        "actualLandingTime": "2018-07-16 04:05:06",
+        "invalid": "N"
+      },
+      {
+        "id": "2",
+        "segment": "XIY-PEK",
+        "model": "738",
+        "number": "1200",
+        "expectedLandingTime": "2018-07-17 01:02:03",
+        "actualLandingTime": "2018-07-17 04:05:06",
+        "invalid": "Y"
+      },
+      {
+        "id": "3",
+        "segment": "SHA-XIY",
+        "model": "739",
+        "number": "1300",
+        "expectedLandingTime": "2018-07-18 01:02:03",
+        "actualLandingTime": "2018-07-18 04:05:06",
+        "invalid": "N"
+      }
+    ]
+  }
+}

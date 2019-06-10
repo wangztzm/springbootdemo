@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "msg": "鏁版嵁閿欒",
+  "data":[
+            {"rownumberer":"1","billidshow":"871-45612300", "pcs":"10","weight":"200","feewt":"200","cargonm":"consol","specopeid":"FRE","sairportid":"INC","eairportid":"PEK","cnsnname":"张三","cnsntel":"15326326236" },
+		    {"rownumberer":"2","billidshow":"871-45612301", "pcs":"10","weight":"200","feewt":"200","cargonm":"consol","specopeid":"FRE","sairportid":"INC","eairportid":"PEK","cnsnname":"张三","cnsntel":"15326326236" },
+		    {"rownumberer":"3","billidshow":"871-45612302", "pcs":"10","weight":"200","feewt":"200","cargonm":"consol","specopeid":"FRE","sairportid":"INC","eairportid":"PEK","cnsnname":"张三","cnsntel":"15326326236" },
+		    {"rownumberer":"4","billidshow":"871-45612303", "pcs":"10","weight":"200","feewt":"200","cargonm":"consol","specopeid":"FRE","sairportid":"INC","eairportid":"PEK","cnsnname":"张三","cnsntel":"15326326236" },
+		    {"rownumberer":"5","billidshow":"871-45612304", "pcs":"10","weight":"200","feewt":"200","cargonm":"consol","specopeid":"FRE","sairportid":"INC","eairportid":"PEK","cnsnname":"张三","cnsntel":"15326326236" },
+		    {"rownumberer":"6","billidshow":"871-45612305", "pcs":"10","weight":"200","feewt":"200","cargonm":"consol","specopeid":"FRE","sairportid":"INC","eairportid":"PEK","cnsnname":"张三","cnsntel":"15326326236" },
+		    {"rownumberer":"7","billidshow":"871-45612306", "pcs":"10","weight":"200","feewt":"200","cargonm":"consol","specopeid":"FRE","sairportid":"INC","eairportid":"PEK","cnsnname":"张三","cnsntel":"15326326236" },
+		    {"rownumberer":"8","billidshow":"871-45612307", "pcs":"10","weight":"200","feewt":"200","cargonm":"consol","specopeid":"FRE","sairportid":"INC","eairportid":"PEK","cnsnname":"张三","cnsntel":"15326326236" },
+		    {"rownumberer":"9", "billidshow":"871-45612308", "pcs":"10","weight":"200","feewt":"200","cargonm":"consol","specopeid":"FRE","sairportid":"INC","eairportid":"PEK","cnsnname":"张三","cnsntel":"15326326236" },
+		    {"rownumberer":"10", "billidshow":"871-45612309", "pcs":"10","weight":"200","feewt":"200","cargonm":"consol","specopeid":"FRE","sairportid":"INC","eairportid":"PEK","cnsnname":"张三","cnsntel":"15326326236" },
+		    {"rownumberer":"11", "billidshow":"871-45612310", "pcs":"10","weight":"200","feewt":"200","cargonm":"consol","specopeid":"FRE","sairportid":"INC","eairportid":"PEK","cnsnname":"张三","cnsntel":"15326326236" },
+		    {"rownumberer":"12", "billidshow":"871-45612311", "pcs":"10","weight":"200","feewt":"200","cargonm":"consol","specopeid":"FRE","sairportid":"INC","eairportid":"PEK","cnsnname":"张三","cnsntel":"15326326236" },
+		    {"rownumberer":"12", "billidshow":"871-45612312", "pcs":"10","weight":"200","feewt":"200","cargonm":"consol","specopeid":"FRE","sairportid":"INC","eairportid":"PEK","cnsnname":"张三","cnsntel":"15326326236" },
+		    {"rownumberer":"12", "billidshow":"871-45612313", "pcs":"10","weight":"200","feewt":"200","cargonm":"consol","specopeid":"FRE","sairportid":"INC","eairportid":"PEK","cnsnname":"张三","cnsntel":"15326326236" },
+		    {"rownumberer":"12", "billidshow":"871-45612314", "pcs":"10","weight":"200","feewt":"200","cargonm":"consol","specopeid":"FRE","sairportid":"INC","eairportid":"PEK","cnsnname":"张三","cnsntel":"15326326236" },
+		    {"rownumberer":"12", "billidshow":"871-45612315", "pcs":"10","weight":"200","feewt":"200","cargonm":"consol","specopeid":"FRE","sairportid":"INC","eairportid":"PEK","cnsnname":"张三","cnsntel":"15326326236" },
+		    {"rownumberer":"12", "billidshow":"871-45612316", "pcs":"10","weight":"200","feewt":"200","cargonm":"consol","specopeid":"FRE","sairportid":"INC","eairportid":"PEK","cnsnname":"张三","cnsntel":"15326326236" },
+		    {"rownumberer":"12", "billidshow":"871-45612317", "pcs":"10","weight":"200","feewt":"200","cargonm":"consol","specopeid":"FRE","sairportid":"INC","eairportid":"PEK","cnsnname":"张三","cnsntel":"15326326236" },
+		    {"rownumberer":"12", "billidshow":"871-45612318", "pcs":"10","weight":"200","feewt":"200","cargonm":"consol","specopeid":"FRE","sairportid":"INC","eairportid":"PEK","cnsnname":"张三","cnsntel":"15326326236" }]
+}

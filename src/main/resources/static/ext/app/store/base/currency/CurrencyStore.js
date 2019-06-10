@@ -1,0 +1,22 @@
+Ext.define('Ming.store.base.currency.CurrencyStore', {
+    extend: 'Ext.data.Store',
+    model: 'Ming.model.base.country.CountryFields',
+    alias: 'store.currencyStore',
+    autoLoad: true,
+    pageSize: 5,
+    proxy: {
+        /* pageParam: 'page.pageNo',
+         limitParam: 'page.pageSize',*/
+        type: 'api',
+        paramsAsJson: true,
+        actionMethods: {
+            read: 'POST'
+        },
+        url: UrlUtil.get('api', 'base/currency/queryAllCountry'),
+        reader: {
+            type: 'json',
+            rootProperty: 'data',
+            messageProperty: 'msg'
+        }
+    }
+});

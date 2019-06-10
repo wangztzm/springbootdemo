@@ -1,0 +1,35 @@
+{
+	"success": true,
+	"msg": "数据错误",
+	"data": {
+		"totalFile": "13",
+		"boxlList": [
+			{
+				"id": "1",
+				"information": "AK328391",
+				"unpack": "Y",
+				"tally": "Y",
+				"warehouse": "CNGG",
+				"wareCode": "1号",
+				"waybillList": [
+					{
+						"id": 1,
+						"waybillNumber": "999-47847800",
+						"manifestPieces": "25",
+						"manifestWeight": "260",
+						"tallyPieces": "1",
+						"tallyWeight": "2",
+						"priority": "Y"
+					}
+				]
+			}, {
+				"id": "2",
+				"information": "AK328391",
+				"unpack": "Y",
+				"tally": "Y",
+				"warehouse": "CNGG",
+				"wareCode": "2号"
+			}
+		]
+	}
+}

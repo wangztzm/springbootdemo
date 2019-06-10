@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "msg": "",
+  "data": {
+    "totalFile": "13",
+    "airlineCompanyList": [
+      {
+        "id": "1",
+        "code":"CA",
+        "waybillPrefix":"999",
+        "chineseName": "中国国际航空",
+        "englishName":"Air China Ltd.",
+        "shortName":"国航"
+      },{
+        "id": "2",
+        "code":"AE",
+        "waybillPrefix":"297",
+        "chineseName": "华信",
+        "englishName":"Mandarin Ltd.",
+        "shortName":"华信"
+      },{
+        "id": "3",
+        "code":"AF",
+        "waybillPrefix":"057",
+        "chineseName": "法国航空公司",
+        "englishName":"Air France",
+        "shortName":"法航"
+      }
+    ]
+  }
+}

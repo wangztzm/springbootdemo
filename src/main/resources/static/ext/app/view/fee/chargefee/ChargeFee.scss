@@ -1,0 +1,10 @@
+@include extjs-display-field-ui(
+        $ui: 'display-field-bottom',
+        $ui-field-height: 24,
+        $ui-line-height : 24
+)
+
+@include extjs-fieldset-ui(
+        $ui: 'fieldset',
+        $ui-header-padding: '0 0'
+)

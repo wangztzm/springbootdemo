@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html manifest="">
+
+	<head>
+
+		<head>
+			<meta http-equiv="content-type" content="text/html; charset=utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+			<title>CFPS升级平台</title>
+			<link rel="stylesheet" type="text/css" href="resources/css/index.css" />
+			<link rel="stylesheet" type="text/css" href="resources/css/progress.css" />
+			<script language="javascript" type="text/javascript" src="resources/js/md5.js"></script>
+			<script language="javascript" type="text/javascript" src="resources/js/My97DatePicker/WdatePicker.js"></script>
+			<script language="javascript" src="resources/js/LodopFuncs/LodopFuncs.js"></script>
+			<script language="javascript" src="resources/js/jquery-1.9.1.min.js"></script>
+			<script language="javascript" src="resources/js/Common.js"></script>
+			<style>
+				.x-tool-img {
+					width: 16px;
+					height: 16px;
+					overflow: hidden;
+					color: #fff;
+				}
+				
+				.x-accordion-item .x-accordion-hd {
+					background: #F5F5F5!important
+				}
+				
+				.x-mask {
+					background-color: rgba(132, 129, 129, 0.5) !important;
+				}
+				
+				.x-tabs-child {
+					background-color: red;
+				}
+				
+				.child-panel {
+					background: red !important;
+				}
+			</style>
+		</head>
+
+		<body>
+			<div id="progress" class="progress progress--active" style="width: 100%;height:1px;">
+				<b id="progressbar" style="width:0%;" class="progress__bar">
+			<span id="progresstext" class="progress__text" style="color:#000000;">
+		      	加载进度: <em>0%</em>
+		    </span>
+		</b>
+			</div>
+		</body>
+		<script type="text/javascript">
+			var Ext = Ext || {};
+			Ext.beforeLoad = function(tags) {
+
+					var desktop = tags.desktop;
+					var style = location.href.match(/style=([\w-]+)/);
+					var color = location.href.match(/color=([\w-]+)/);
+					style = (style && style[1]) || localStorage.getItem("style"); /**系统皮肤*/
+					color = (color && color[1]) || localStorage.getItem("color"); /**系统颜色*/
+					if(desktop) {
+						var html = '<div id="loading"> ' +
+							'	  <div class="loading-indicator"> ' +
+							'		  <img src="resources/images/system/large-loading.gif" width="32" height="32" /> ' +
+							'		      CFPS ' +
+							'		  <br/> <span id="loading-msg">Loading...</span> ' +
+							'	  </div> ' +
+							'</div>';
+						document.write(html);
+						//style=style+".json";
+						//Ext.style = style = style || 'triton';
+						// style = 'build/development/Ming/'+style+'/'+style + '.json';
+						//alert(color);
+						if(color && color.length == 6) {
+							localStorage.setItem("color", color);
+							document.write('<style type="text/css">:root {--color: #' + color + ';} </style>');
+							document.write('<link rel="stylesheet" type="text/css" href="resources/css/skin.css" />');
+						}
+					}
+					style = style || 'neptune';
+					//Ext.manifest ="classic/"+ style+".json";
+					Ext.manifest = "" + style + ".json";
+					var sum = 112,
+						i = 0,
+						orange = 30,
+						yellow = 55,
+						green = 85;
+					var progressbar = document.getElementById("progressbar");
+					var progresstext = document.getElementById("progresstext");
+					Ext.urlCompleteCallback = function(entry) {
+							var percent = parseInt(((i++/sum)*100));
+											if(percent > 100) return;
+											if(percent > orange) progressbar.className += " progress__bar--orange";
+											if(percent > yellow) progressbar.className += " progress__bar--yellow";
+											if(percent > green) progressbar.className += " progress__bar--green"; progressbar.style.width = percent + "%"; progresstext.childNodes[1].innerText = percent + "%";
+										};
+									};
+
+									function loadJs(url, callback) {
+										var script = document.createElement('script');
+										script.type = "text/javascript";
+										if(typeof(callback) != "undefined") {
+											if(script.readyState) {
+												script.onreadystatechange = function() {
+													if(script.readyState == "loaded" || script.readyState == "complete") {
+														script.onreadystatechange = null;
+														callback();
+													}
+												}
+											} else {
+												script.onload = function() {
+													callback();
+												}
+											}
+										}
+										script.src = url;
+										document.body.appendChild(script);
+									}
+		</script>
+		<!-- The line below must be kept intact for Sencha Cmd to build your application -->
+		<script id="microloader" data-app="ff2ebb31-8894-427f-8c67-e9f9b5103a22" type="text/javascript" src="bootstrap.js"></script>
+
+	</head>
+
+	<body>
+
+	</body>
+
+</html>

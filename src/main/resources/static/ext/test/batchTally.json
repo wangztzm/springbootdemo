@@ -1,0 +1,125 @@
+{
+  "success": true,
+  "msg": "数据错误",
+  "data": {
+    "totalFile": "13",
+    "tallylList": [
+     {
+	        "id": "1",
+	        "waybillNumber": "999-47847800",
+	        "waybillArrival": "Y",
+	        "pieces": "25",
+	        "weight": "260",
+	        "manifestPieces": "25",
+	        "manifestWeight": "260",
+	        "tallyPieces": "0",
+	        "tallyWeight": "0",
+	        "packaging": "木箱",
+	        "forkliftNumber": "1",
+	        "warehouses": [{
+	            "id": 1,
+	            "batchTallyId": 1,
+	            "warehouse": "NGCG",
+	            "wareCode": "01",
+	            "pieces": 10,
+	            "weight": 20,
+	            "boardBox": "板箱"
+	        },{
+	            "id": 2,
+	            "batchTallyId": 1,
+	            "warehouse": "NGCG",
+	            "wareCode": "01",
+	            "pieces": 6,
+	            "weight": 10,
+	            "boardBox": "板箱"
+	        }]
+	      },
+	      {
+	        "id": "2",
+	        "waybillNumber": "999-47847800",
+	        "waybillArrival": "Y",
+	        "pieces": "25",
+	        "weight": "260",
+	        "manifestPieces": "25",
+	        "manifestWeight": "260",
+	        "tallyPieces": "0",
+	        "tallyWeight": "0",
+	        "packaging": "木箱",
+	        "forkliftNumber": "1",
+	        "warehouses": [{
+	            "id": 3,
+	            "batchTallyId": 2,
+	            "warehouse": "NGCG",
+	            "wareCode": "02",
+	            "pieces": 16,
+	            "weight": 30,
+	            "boardBox": "板箱"
+	        }]
+	      },
+	     {
+	        "id": "3",
+	        "waybillNumber": "999-47847800",
+	        "waybillArrival": "Y",
+	        "pieces": "25",
+	        "weight": "260",
+	        "manifestPieces": "25",
+	        "manifestWeight": "260",
+	        "tallyPieces": "0",
+	        "tallyWeight": "0",
+	        "packaging": "木箱",
+	        "forkliftNumber": "2"
+	      },
+	      {
+	        "id": "4",
+	        "waybillNumber": "999-47847800",
+	        "waybillArrival": "Y",
+	        "pieces": "25",
+	        "weight": "260",
+	        "manifestPieces": "25",
+	        "manifestWeight": "260",
+	        "tallyPieces": "0",
+	        "tallyWeight": "0",
+	        "packaging": "木箱",
+	        "forkliftNumber": "3"
+	      },
+	      {
+	        "id": "5",
+	        "waybillNumber": "999-47847800",
+	        "waybillArrival": "Y",
+	        "pieces": "25",
+	        "weight": "260",
+	        "manifestPieces": "25",
+	        "manifestWeight": "260",
+	        "tallyPieces": "0",
+	        "tallyWeight": "0",
+	        "packaging": "木箱",
+	        "forkliftNumber": "1"
+	      },
+	      {
+	        "id": "6",
+	        "waybillNumber": "999-47847800",
+	        "waybillArrival": "Y",
+	        "pieces": "25",
+	        "weight": "260",
+	        "manifestPieces": "25",
+	        "manifestWeight": "260",
+	        "tallyPieces": "0",
+	        "tallyWeight": "0",
+	        "packaging": "木箱",
+	        "forkliftNumber": "4"
+	      },{
+	        "id": "7",
+	        "waybillNumber": "999-47847800",
+	        "waybillArrival": "Y",
+	        "pieces": "25",
+	        "weight": "260",
+	        "manifestPieces": "25",
+	        "manifestWeight": "260",
+	        "tallyPieces": "0",
+	        "tallyWeight": "0",
+	        "packaging": "木箱",
+	        "forkliftNumber": "1"
+	      }
+    ]
+  }
+}

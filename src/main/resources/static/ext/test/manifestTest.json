@@ -1,0 +1,61 @@
+{
+	"success": true,
+	"msg": "数据错误",
+	"data": {
+		"totalFile": "13",
+		"manifestDetailList": [
+			{
+				"id": "1",
+				"uldno": "AKE34431CA",
+				"disassambled": "N",
+				"waybillLists": [
+					{
+						"wayBillno": "999-43543500",
+						"pices": "10",
+						"weight": "232",
+						"pick": "服装"
+					}, {
+						"wayBillno": "999-43543522",
+						"pices": "45",
+						"weight": "34",
+						"pick": "服装"
+					}, {
+						"wayBillno": "999-43543545",
+						"pices": "45",
+						"weight": "34",
+						"pick": "服装"
+					}
+				]
+			}, {
+				"id": "2",
+				"uldno": "AKE34432CA",
+				"disassambled": "Y",
+				"waybillLists": [
+					{
+						"wayBillno": "999-43543533",
+						"pices": "45",
+						"weight": "34",
+						"pick": "服装"
+					}, {
+						"wayBillno": "999-43543578",
+						"pices": "45",
+						"weight": "34",
+						"pick": "服装"
+					}
+				]
+			}, {
+				"id": "3",
+				"uldno": "BLK",
+				"disassambled": "Y",
+				"waybillLists": [
+					{
+						"wayBillno": "999-43543544",
+						"pices": "10",
+						"weight": "232",
+						"pick": "服装"
+					}
+				]
+			}
+		]
+	}
+}

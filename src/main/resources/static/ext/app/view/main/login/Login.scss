@@ -1,0 +1,13 @@
+@include extjs-text-field-ui(
+        $ui: 'ext-border-radius',
+        $ui-border-radius: 25px,
+        $ui-padding: 3px 25px 2px
+);
+.login-icon{
+        font-size: 30px;
+        line-height: 50px;
+        background: none;
+        width: 70px;
+        cursor: default;
+        color: rgb(229, 229, 229);
+}
